@@ -7,11 +7,8 @@
 </head>
 <body>
     <div>
-        <h1>Список задач</h1>
+        <h2>Список задач</h2>
         
-        <a href="{{ route('tasks.create') }}">
-            Добавить задачу
-        </a>
         <ul>
             @foreach($tasks as $task)
                 <li>
@@ -27,6 +24,7 @@
             </form>
                 </li>
             @endforeach
+                    <a href="{{ route('tasks.create') }}">Добавить</a>
         </ul>
     </div>
 </body>
