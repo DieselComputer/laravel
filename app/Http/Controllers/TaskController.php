@@ -9,7 +9,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = $this->repository->findAll();
+        $tasks = Task::orderBy('id', 'desc')->get();
         return view('tasks.index', compact('tasks'));
     }
 
